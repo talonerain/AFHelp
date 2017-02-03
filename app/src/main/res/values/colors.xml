@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="write">#FFFFFF</color>
+    <color name="fm_message">#F2FF82AB</color>
+    <color name="edit_message">#CCCFCFCF</color>
+    <color name="send_txt_color">#00BFFF</color>
+    <color name="edit_message_common">#CCffffff</color>
+</resources>

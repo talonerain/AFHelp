@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">大白一键求救</string>
+    <string name="message_txt">求救短信内容：</string>
+    <string name="check_location">发送地理位置(需开启定位权限)</string>
+
+    <string name="phone_txt">接收短信手机：</string>
+    <string name="btn_commit_sure">确&#160;认</string>
+    <string name="btn_commit_modify">修&#160;改</string>
+    <string name="phone_input_hint">点击手机图标选择联系人</string>
+    
+    <string name="guide">1.请务必在手机的【设置-应用管理】中找到本应用，开启以下权限：
+        发送短信权限、通讯录(联系人)权限、定位权限，否则可能导致应用无法正常使用。\n
+        2.点击主界面的“设置短信”按钮进行设置(一次设置，永久生效)，遇到危险情况时点击
+    “一键求救”即可发送求救短信。\n\n如果你在使用本应用过程中有任何意见或者遇到任何问题可随时向我反馈，我会尽快给出回复。你的满意就是我不断前进的动力-_-#
+</string>
+</resources>
