@@ -1,4 +1,4 @@
-package com.lsy.app.help;
+package com.lsy.app.help.sdk;
 
 import android.app.Application;
 

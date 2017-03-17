@@ -32,13 +32,14 @@ import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
+import com.lsy.app.help.util.CrashHandler;
+import com.lsy.app.help.util.Util;
 import com.pgyersdk.crash.PgyCrashManager;
 import com.pgyersdk.feedback.PgyFeedback;
 import com.pgyersdk.views.PgyerDialog;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
 public class MainActivity extends Activity implements SendFragment.SendFraInterface, MessageFragment.MsgFrgOnclick,
         GuideFragment.guideOnClick {
