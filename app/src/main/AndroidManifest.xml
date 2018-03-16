@@ -64,6 +64,9 @@
             android:name="PGYER_APPID"
             android:value="0b807e84d705f85fadf7179654ce25b1" >
         </meta-data>
+        <!--最大屏幕比例，支持全面屏-->
+        <meta-data android:name="android.max_aspect"
+            android:value="2.1"/>
     </application>
 
 </manifest>
