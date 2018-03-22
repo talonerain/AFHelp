@@ -39,7 +39,7 @@
     <uses-permission android:name="android.permission.READ_LOGS" /> <!-- 获取logcat日志 -->
 
     <application
-        android:name=".sdk.PgyApplication"
+        android:name=".sdk.TkApplication"
         android:icon="@mipmap/icon_red"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -67,6 +67,11 @@
         <!--最大屏幕比例，支持全面屏-->
         <meta-data android:name="android.max_aspect"
             android:value="2.1"/>
+
+        <!--Tinker需要在AndroidManifest.xml中指定TINKER_ID，每次升级客户端版本需要更新thinerId，否则会加载旧版本补丁-->
+        <meta-data
+            android:name="TINKER_ID"
+            android:value="tinker_id_100" />
     </application>
 
 </manifest>
