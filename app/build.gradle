@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.lsy.app.help"
-        minSdkVersion 13
+        minSdkVersion 21
         targetSdkVersion 23
         versionCode 6
         versionName "2.0"
@@ -36,4 +36,3 @@ dependencies {
     compile files('libs/sqlitejdbc-v056.jar')
     compile 'com.githang:status-bar-compat:latest.integration'  //透明状态栏
 }
-
