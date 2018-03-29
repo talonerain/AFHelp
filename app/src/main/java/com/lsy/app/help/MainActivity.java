@@ -598,7 +598,7 @@ public class MainActivity extends Activity implements SendFragment.SendFraInterf
         if (Build.VERSION.SDK_INT>=23) {
             //此处做动态权限申请
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION,
-                    Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.SEND_SMS, Manifest.permission.READ_PHONE_STATE}, 825638);
+                    Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.SEND_SMS, Manifest.permission.READ_PHONE_STATE}, 1);
         }
     }
 }
