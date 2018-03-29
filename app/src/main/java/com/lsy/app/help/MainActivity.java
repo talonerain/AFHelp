@@ -16,13 +16,16 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v4.app.ActivityCompat;
 import android.telephony.SmsManager;
 import android.view.KeyEvent;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -32,6 +35,7 @@ import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
+import com.githang.statusbar.StatusBarCompat;
 import com.lsy.app.help.util.CrashHandler;
 import com.lsy.app.help.util.Util;
 import com.pgyersdk.crash.PgyCrashManager;
@@ -73,6 +77,8 @@ public class MainActivity extends Activity implements SendFragment.SendFraInterf
         handler.init(getApplicationContext());
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+        requestPermission();
+        StatusBarCompat.setStatusBarColor(MainActivity.this, Color.WHITE);  //状态栏颜色
         fm = getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         SendFragment sendFragment = new SendFragment();
@@ -576,5 +582,23 @@ public class MainActivity extends Activity implements SendFragment.SendFraInterf
             }
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    private void setBarStyle() {
+        Window window = this.getWindow();
+        //取消设置透明状态栏,使 ContentView 内容不再覆盖状态栏
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //需要设置这个 flag 才能调用 setStatusBarColor 来设置状态栏颜色
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        //设置状态栏颜色
+        //window.setStatusBarColor(color);
+    }
+
+    private void requestPermission() {
+        if (Build.VERSION.SDK_INT>=23) {
+            //此处做动态权限申请
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION,
+                    Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.SEND_SMS, Manifest.permission.READ_PHONE_STATE}, 825638);
+        }
     }
 }
